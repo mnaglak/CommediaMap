@@ -19,7 +19,7 @@
 //Example of a localled called tiled basemap created from a .geotiff  using gdal2tiles (workflow available)
 
 
-			var backgroundMap = L.tileLayer.mbTiles('https://arc.bc.edu/omeka-demo/files/mbtiles_test.mbtiles').addTo(map);
+			var backgroundMap = L.tileLayer.mbTiles('https://mnaglak.github.io/CommediaMap/mbtiles_test.mbtiles').addTo(map);
 
 //Lets you see lat/long in the console window. Useful for placing non-georeferenced maps in the correct location or for placing markers
 			map.on('click', function(e){
