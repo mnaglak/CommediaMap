@@ -1,0 +1,36 @@
+Author	Ptolemy, Claudius
+Author	Fries, Lorenz
+Author	Servetus, Michael
+Date	1541
+Short Title	Tabula novae Italiae
+Publisher	Apud Hugonem a Porta
+Publisher Location	Prostant Lugduni
+Publisher	Gaspar Trechsel
+Publisher Location	Vienne
+Type	Atlas Map
+Obj Height cm	27
+Obj Width cm	34
+Scale 1	5,300,000
+Note	Engraved modern map of Italy.
+Reference	Mickwitz, Ann-Maria (& others) ed. The A.E. Nordenskiold Collection..., II, 211.
+Country	Italy
+Full Title	Tabula nouae Italiae. (to accompany) Claudii Ptolemaei Alexandrini Geographicae enarrationis libri octo. Sed ad Graeca & prisca exemplaria a Michaele Villanouano secundo recogniti & locis innumeris denuo castigati. Prostant Lugduni Apud Hugonem a Porta. M.D.XLI. (1541).
+List No	11325.070
+Page No	36
+Series No	70
+Publication Author	Ptolemy, Claudius
+Publication Author	Fries, Lorenz
+Publication Author	Servetus, Michael
+Pub Date	1541
+Pub Title	Claudii Ptolemaei Alexandrini Geographicae enarrationis libri octo. Sed ad Graeca & prisca exemplaria a Michaele Villanouano secundo recogniti & locis innumeris denuo castigati. Adiecta insuper ab eodem Scholia, quibus & difficilis ille Primus Liber nunc primum explicatur, & exoleta Urbium nomina ad nostri seculi morem exponuntur. Quinquaginta illae quoque cum veterum tum recentium Tabulae adnectuntur variisque incolentium ritus & mores explicantur. Accedit index locupletissimus hactenus non uisus. Prostant Lugduni Apud Hugonem a Porta. M.D.XLI. (1541).
+Pub Reference	Mickwitz, Ann-Maria (& others) ed. The A.E. Nordenskiold Collection..., II, 211.
+Pub Note	Second edition of Michael Servetus' Ptolemy 's Geographia utilising Lorenz Fries's woodcut maps, was published by Gaspar Trechsel in Vienna, in 1541 and sold by Hughes de la Porte in Lyons. This atlas is divided into three parts: First, the text comprising the new Latin translation by the humanist Wilibald Pirckheimer of the 1525 edition, which has been edited by Michael Servetus, for the first time for 1535 edition and the second time for this 1541 edition. The second part consists of 50 maps, comprising 27 Ptolemaic and 23 modern maps. The maps were printed from the same wooden blocks which were made for the first edition in 1522 by Lorenz Fries, the famous physician, astrologer and geographer, many with descriptive text on recto and verso. With half title index before or after the maps varies. A special feature of the 1541 edition is the missing text on verso of some modern maps. This is due to the action of Calvinism, especially since the text on verso of the Holy Land map provoked controversy. The third and final part consists of a comprehensive index. Many of the first three editions were burned, which led Servetus to abdicate on some text on the map versos. Maps Showing rivers, canals, waterways, place names, fortifications, and administrative boundaries. Relief shown pictorially. Some maps drawn in a trapezoidal projection.
+Pub List No	11325.000
+Pub Type	World Atlas
+Pub Maps	50
+Pub Height cm	41
+Pub Width cm	28
+Image No	11325070.jp2
+Download 1	<a href=https://www.davidrumsey.com/rumsey/download.pl?image=/166/11325070.jp2 target=_blank>Full Image Download in JP2 Format</a>
+Download 2	<a href="https://www.extensis.com/support/geoviewer-9" target="_blank">GeoViewer for JP2 and SID files</a>
+Authors	Ptolemy, Claudius; Fries, Lorenz; Servetus, Michael
