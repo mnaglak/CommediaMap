@@ -1,9 +1,9 @@
 
-//Define map start up options, here defined to center on Gabii
+//Define map start up options, here defined to center on Italy
 		var mapOptions = {
 			center: [41.8875, 12.72], //set center
-			zoom: 10 , //set initial zoom
-			maxZoom : 24,  //set max zoom
+			zoom: 7 , //set initial zoom
+			maxZoom : 10,  //set max zoom
 			}
 
 //Creates Map according to map options
@@ -19,7 +19,7 @@
 //Example of a localled called tiled basemap created from a .geotiff  using gdal2tiles (workflow available)
 
 
-			var backgroundMap = L.tileLayer.mbTiles('https://mnaglak.github.io/CommediaMap/mbtiles_test.mbtiles').addTo(map);
+			var backgroundMap = L.tileLayer('./QTiler_test/TabulaItaliae/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 0, maxZoom: 10}).addTo(map);
 
 //Lets you see lat/long in the console window. Useful for placing non-georeferenced maps in the correct location or for placing markers
 			map.on('click', function(e){
