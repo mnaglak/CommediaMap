@@ -4,6 +4,8 @@
 			center: [41.8875, 12.72], //set center
 			zoom: 6 , //set initial zoom
 			maxZoom : 12,  //set max zoom
+			minZoom : 5,
+			maxBounds: [ [-90, -180] , [90,180] ]
 			}
 
 //Creates Map according to map options
@@ -46,3 +48,6 @@
 
 					l.bindPopup(out.join("<br />"));
 				};
+
+				L.control.pan().addTo(map);
+				L.control.scale().addTo(map);
