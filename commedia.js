@@ -4,7 +4,7 @@
 			center: [41.8875, 12.72], //set center
 			zoom: 6 , //set initial zoom
 			maxZoom : 12,  //set max zoom
-			minZoom : 5,
+			minZoom : 2,
 			maxBounds: [ [-90, -180] , [90,180] ]
 			}
 
