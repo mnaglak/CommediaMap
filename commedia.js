@@ -21,7 +21,7 @@
 //Example of a localled called tiled basemap created from a .geotiff  using gdal2tiles (workflow available)
 			var tabulaItaliae = L.tileLayer('./QTiler_test/TabulaItaliae/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 0, maxZoom: 10}).addTo(map);
 			var cities = L.geoJson(italianCities, {
-				onEachFeature: popUp;
+				onEachFeature: popUp
 			});
 			var baseLayers = {
 				"Satellite Imagery" : Esri_WorldImagery,
