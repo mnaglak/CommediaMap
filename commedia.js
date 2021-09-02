@@ -47,7 +47,7 @@
 
 			var overlayMaps = {
 				"Tabula Italiae" : tabulaItaliae,
-				"Cities3" : cities
+				"Cities4" : cities
 				};
 				L.control.layers(baseLayers, overlayMaps).addTo(map);
 
