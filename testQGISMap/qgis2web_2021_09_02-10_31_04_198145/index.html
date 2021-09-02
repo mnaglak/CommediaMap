@@ -56,18 +56,7 @@
         bounds_group.addLayer(layer_trimmed_geo_0);
         map.addLayer(layer_trimmed_geo_0);
         function pop_italianCities_1(feature, layer) {
-            var popupContent = '<table>\
-                   <tr>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Name</th>\
-                        <td>' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">URL</th>\
-                        <td>' + (feature.properties['URL'] !== null ? autolinker.link(feature.properties['URL'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
+            var popupContent;
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
