@@ -18,11 +18,26 @@
 			}).addTo(map);
 
 
+			var geojsonMarkerOptions = {
+			    radius: 8,
+			    fillColor: "#ff7800",
+			    color: "#000",
+			    weight: 1,
+			    opacity: 1,
+			    fillOpacity: 0.8
+			};
+
+
 //Example of a localled called tiled basemap created from a .geotiff  using gdal2tiles (workflow available)
 			var tabulaItaliae = L.tileLayer('./QTiler_test/TabulaItaliae/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 0, maxZoom: 10}).addTo(map);
-			var cities = L.geoJson(italianCities, {
+			var cities = L.geoJSON(italianCities, {
 				onEachFeature: popUp
 			}).addTo(map);
+
+
+
+
+
 			var baseLayers = {
 				"Satellite Imagery" : Esri_WorldImagery,
 				};
