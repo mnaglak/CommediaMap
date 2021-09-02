@@ -20,7 +20,9 @@
 
 //Example of a localled called tiled basemap created from a .geotiff  using gdal2tiles (workflow available)
 			var tabulaItaliae = L.tileLayer('./QTiler_test/TabulaItaliae/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 0, maxZoom: 10}).addTo(map);
-
+			var cities = L.geoJson(italianCities, {
+				onEachFeature: popUp;
+			});
 			var baseLayers = {
 				"Satellite Imagery" : Esri_WorldImagery,
 				};
@@ -43,7 +45,8 @@
 			function popUp(f,l){
 				var out = [];
 				if (f.properties){
-
+					out.push('<b>City: </b>' + f.properties.city);
+					out.push('<a href="'+ f.properties.link + '" target="_blank">Link to City Page</a>');
 					} //allows for link to external URL via attribute in .geoJson table
 
 					l.bindPopup(out.join("<br />"));
