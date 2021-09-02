@@ -22,13 +22,14 @@
 			var tabulaItaliae = L.tileLayer('./QTiler_test/TabulaItaliae/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 0, maxZoom: 10}).addTo(map);
 			var cities = L.geoJson(italianCities, {
 				onEachFeature: popUp
-			});
+			}).addTo(map);
 			var baseLayers = {
 				"Satellite Imagery" : Esri_WorldImagery,
 				};
 
 			var overlayMaps = {
 				"Tabula Italiae" : tabulaItaliae,
+				"Cities" : cities
 				};
 				L.control.layers(baseLayers, overlayMaps).addTo(map);
 
