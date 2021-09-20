@@ -2,9 +2,9 @@
 //Define map start up options, here defined to center on Italy
 		var mapOptions = {
 			center: [41.8875, 12.72], //set center
-			zoom: 3 , //set initial zoom
+			zoom: 6 , //set initial zoom
 			maxZoom : 12,  //set max zoom
-			minZoom : 2,
+			minZoom : 5,
 			maxBounds: [ [-90, -180] , [90,180] ]
 			}
 
@@ -17,29 +17,13 @@
 			attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 			}).addTo(map);
 
-		var italianCitiesJSON = {
-			"type": "FeatureCollection",
-			"name": "italianCities",
-			"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::900913" } },
-			"features": [
-			{ "type": "Feature", "properties": { "id": 1, "Name": "Rome", "URL": "https://library.bc.edu/commedia/rome" }, "geometry": { "type": "Point", "coordinates": [ 1380689.930153855588287, 5159564.977365796454251 ] } },
-			{ "type": "Feature", "properties": { "id": 2, "Name": "Ferrara", "URL": "https://library.bc.edu/commedia/ferrara" }, "geometry": { "type": "Point", "coordinates": [ 1256886.210492046782747, 5558615.072752060368657 ] } },
-			{ "type": "Feature", "properties": { "id": 3, "Name": "Padua-Venice", "URL": "https://library.bc.edu/commedia/padua-venice" }, "geometry": { "type": "Point", "coordinates": [ 1322544.38202468235977, 5632545.139910855330527 ] } },
-			{ "type": "Feature", "properties": { "id": 4, "Name": "Florence", "URL": "https://library.bc.edu/commedia/florence" }, "geometry": { "type": "Point", "coordinates": [ 1253983.51551561220549, 5403891.751440595835447 ] } },
-			{ "type": "Feature", "properties": { "id": 5, "Name": "Siena", "URL": "https://library.bc.edu/commedia/siena" }, "geometry": { "type": "Point", "coordinates": [ 1257903.471273115603253, 5335572.522524106316268 ] } },
-			{ "type": "Feature", "properties": { "id": 6, "Name": "Mantua", "URL": "https://library.bc.edu/commedia/mantua" }, "geometry": { "type": "Point", "coordinates": [ 1182750.944869787665084, 5608073.891245156526566 ] } },
-			{ "type": "Feature", "properties": { "id": 7, "Name": "Urbino", "URL": "https://library.bc.edu/commedia/urbino" }, "geometry": { "type": "Point", "coordinates": [ 1405665.627055709483102, 5384617.960758712142706 ] } }
-			]
-			};
-
 
 //Example of a localled called tiled basemap created from a .geotiff  using gdal2tiles (workflow available)
-			var tabulaItaliae = L.tileLayer('./QTiler_test/TabulaItaliae/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 0, maxZoom: 10}).addTo(map);
+			var tabulaItaliae = new L.tileLayer('./QTiler_test/TabulaItaliae/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 0, maxZoom: 10}).addTo(map);
 
-			var cities = new L.geoJson(italianCities).addTo(map);
-
-
-
+			var highlightedCities = new L.geoJSON(italianCitiesOnline, {
+				onEachFeature: popUp
+			}).addTo(map);
 
 			var baseLayers = {
 				"Satellite Imagery" : Esri_WorldImagery,
@@ -47,7 +31,8 @@
 
 			var overlayMaps = {
 				"Tabula Italiae" : tabulaItaliae,
-				"Cities4" : cities
+				"Cities"				:  highlightedCities
+
 				};
 				L.control.layers(baseLayers, overlayMaps).addTo(map);
 
@@ -64,8 +49,8 @@
 			function popUp(f,l){
 				var out = [];
 				if (f.properties){
-					out.push('<b>City: </b>' + f.properties.city);
-					out.push('<a href="'+ f.properties.link + '" target="_blank">Link to City Page</a>');
+					out.push('<b>City: </b>' + f.properties.Name);
+					out.push('<a href="'+ f.properties.URL + '" target="_blank">Link to City Page</a>');
 					} //allows for link to external URL via attribute in .geoJson table
 
 					l.bindPopup(out.join("<br />"));
