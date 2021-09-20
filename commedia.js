@@ -1,7 +1,7 @@
 
 //Define map start up options, here defined to center on Italy
 		var mapOptions = {
-			center: [42.5, 12.5], //set center
+			center: [43, 12.5], //set center
 			zoom: 6 , //set initial zoom
 			maxZoom : 12,  //set max zoom
 			minZoom : 5,
